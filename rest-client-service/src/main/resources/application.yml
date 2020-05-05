@@ -1,6 +1,6 @@
 spring:
   application:
-    name: rest-client
+    name: rest-service-client
 
 eureka:
   client:

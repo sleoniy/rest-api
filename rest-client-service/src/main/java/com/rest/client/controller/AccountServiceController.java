@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rest.client.model.Account;
-import com.rest.client.proxy.ValorantProxy;
+//import com.rest.client.proxy.ValorantProxy;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -35,6 +35,7 @@ public class AccountServiceController {
 	@ApiOperation( value = "Gets rank of specified player", tags = "valorant")
 	@RequestMapping(value = "/rank", method = RequestMethod.GET)
 	public String fetchRank(@RequestParam(name = "battletag") final String battleTag) {
-		return proxy.fetchRank(battleTag);
+		return "Hello World";
+//				proxy.fetchRank(battleTag);
 	}
 }
