@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: rest-client
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: true
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+     
+feign:
+   httpclient:
+      max-connections: 15
+      connection-timeout: 60000
+   client:
+      config:
+         default:
+            connect-timeout: 60000
+            read-timeout: 60000
