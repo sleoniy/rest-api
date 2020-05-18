@@ -1,41 +1,32 @@
 package com.rest.client.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
+import javax.ws.rs.Path;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.rest.client.model.Account;
-//import com.rest.client.proxy.ValorantProxy;
-
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-//For swagger
-@Api(value = "Valorant Stat Controller", tags = "valorant")
+import reactor.core.publisher.Mono;
+
+
 @RestController
+@Api(value = "/valorant")
 @RequestMapping("/valorant")
+@Path("/valorant")
 public class AccountServiceController {
 
 
-//	private final ValorantProxy proxy;
-//	
-//	@Autowired
-//	public AccountServiceController( final ValorantProxy proxy) {
-//		this.proxy = proxy;
-//		
-//	}
+  // private final ValorantProxy proxy;
+  //
+  // @Autowired
+  // public AccountServiceController( final ValorantProxy proxy) {
+  // this.proxy = proxy;
+  //
+  // }
 
-	@ApiOperation( value = "Gets rank of specified player", tags = "valorant")
-	@RequestMapping(value = "/rank", method = RequestMethod.GET)
-	public String fetchRank(@RequestParam(name = "battletag") final String battleTag) {
-		return "Hello World";
-//				proxy.fetchRank(battleTag);
-	}
+  // @ApiOperation(value = "Gets rank of specified player", tags = "valorant")
+  @RequestMapping(value = "/api", method = RequestMethod.GET)
+  public Mono<String> fetchRank() {
+    return Mono.just("Hello World");
+    // proxy.fetchRank(battleTag);
+  }
 }
