@@ -8,18 +8,22 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ChannelWhitelist {
 
-  private static List<String> whitelist;
+  private static List<String> whitelistChannels;
+  private static String commandChannel;
 
   public static List<String> getWhitelist() {
-    return whitelist;
+    return whitelistChannels;
+  }
+
+  public static String getCommandChannel() {
+    return commandChannel;
   }
 
   @Autowired
-  public ChannelWhitelist(@Value("${discord.command.whitelist}") final List<String> whitelist) {
-    ChannelWhitelist.whitelist = whitelist;
-  }
-
-  public ChannelWhitelist() {
-
+  public ChannelWhitelist(
+      @Value("${discord.command.whitelist}") final List<String> whitelistChannels,
+      @Value("${discord.command.channel}") final String commandChannel) {
+    ChannelWhitelist.whitelistChannels = whitelistChannels;
+    ChannelWhitelist.commandChannel = commandChannel;
   }
 }
