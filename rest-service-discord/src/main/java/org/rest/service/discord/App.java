@@ -16,7 +16,5 @@ public class App {
     SpringApplication.run(App.class, args);
     JDA jda = new JDABuilder("NzExNzI4NTUxNTU2MDIyMzIy.XsHO9g.VrQj5XRSOjwRHdOklLZAkuYHFxA").build();
     jda.addEventListener(new AntiCommandAdapter());
-    System.out.println();
-
   }
 }
