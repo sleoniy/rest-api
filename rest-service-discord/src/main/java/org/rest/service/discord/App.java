@@ -14,7 +14,7 @@ public class App {
   public static void main(String[] args) throws LoginException {
 
     SpringApplication.run(App.class, args);
-    JDA jda = new JDABuilder("NzExNzI4NTUxNTU2MDIyMzIy.XsHO9g.VrQj5XRSOjwRHdOklLZAkuYHFxA").build();
+    JDA jda = new JDABuilder(null).build();
     jda.addEventListener(new AntiCommandAdapter());
   }
 }
