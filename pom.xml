@@ -9,7 +9,8 @@
 	<modules>
 		<module>eureka-service</module>
 		<module>rest-client-service</module>
-    <module>rest-service-discord</module>
+    	<module>rest-service-discord</module>
+   		<module>rest-service-swipe</module>
   </modules>
 
 	<properties>
@@ -24,7 +25,13 @@
 			<artifactId>spring-context</artifactId>
 			<version>5.2.5.RELEASE</version>
 		</dependency>
-
+		 <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-openfeign</artifactId>
+		    <version>2.2.0.RELEASE</version>
+		</dependency>
+    
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

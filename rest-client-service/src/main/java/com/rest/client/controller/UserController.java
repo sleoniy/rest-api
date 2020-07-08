@@ -1,29 +1,28 @@
 package com.rest.client.controller;
 
-import javax.ws.rs.Path;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import io.swagger.annotations.Api;
+import com.rest.client.proxy.UserProxy;
+import io.swagger.annotations.ApiOperation;
 import reactor.core.publisher.Mono;
 
 
 @RestController
-@Api(value = "/valorant")
-@RequestMapping("/valorant")
-@Path("/valorant")
-public class AccountServiceController {
+@RequestMapping("/account")
+public class UserController {
 
 
-  // private final ValorantProxy proxy;
-  //
-  // @Autowired
-  // public AccountServiceController( final ValorantProxy proxy) {
-  // this.proxy = proxy;
-  //
-  // }
+  private final UserProxy proxy;
 
-  // @ApiOperation(value = "Gets rank of specified player", tags = "valorant")
+  @Autowired
+  public UserController(final UserProxy proxy) {
+    this.proxy = proxy;
+
+  }
+
+  @ApiOperation(value = "Gets user account information", tags = "user")
   @RequestMapping(value = "/api", method = RequestMethod.GET)
   public Mono<String> fetchRank() {
     return Mono.just("Hello World");

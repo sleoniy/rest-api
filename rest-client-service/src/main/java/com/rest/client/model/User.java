@@ -1,11 +1,11 @@
 package com.rest.client.model;
 
-public class Account {
+public class User {
 	private String name;
 	private String className;
 
 	
-	public Account(String name, String className) {
+	public User(String name, String className) {
 		this.name = name;
 		this.className = className;
 	}
