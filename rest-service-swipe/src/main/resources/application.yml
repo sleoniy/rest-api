@@ -1,0 +1,26 @@
+spring:
+	application:
+		name: swype-user-services
+server:
+	servlet:
+		context-path: /api/swype/user
+	ssl:
+		enabled: false
+	port: 8111
+eureka:
+	client:
+		serviceUrl:
+			defaultZone: ADD IP
+			
+feign:
+	client:
+		config:
+			default:
+				connect-timeout: 6000
+				read-timeout: 6000
+	httpclient:
+		connection-timeout: 6000
+		max-connections-per-route: 10
+		
+http:
+	protocol: http
