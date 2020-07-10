@@ -7,11 +7,12 @@
 	<packaging>pom</packaging>
 
 	<modules>
+   		<module>rest-service-framework</module>
 		<module>eureka-service</module>
 		<module>rest-client-service</module>
     	<module>rest-service-discord</module>
    		<module>rest-service-swipe</module>
-  </modules>
+	</modules>
 
 	<properties>
 		<maven.compiler.source>1.7</maven.compiler.source>
