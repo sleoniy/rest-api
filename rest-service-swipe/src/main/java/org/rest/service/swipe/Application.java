@@ -12,7 +12,7 @@ public class Application {
   private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
   public static void main(String[] args) throws LoginException {
-    logger.info("Initializing REST Client...");
+    logger.info("Initializing REST Swype...");
 
     SpringApplication.run(Application.class, args);
 

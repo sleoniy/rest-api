@@ -11,7 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages = {"com.rest.client.proxy", "com.rest.client.config"})
+@ComponentScan(basePackages = {"com.rest.client.proxy", "com.rest.client.config",
+    "com.rest.client.controller"})
 public class Application {
 
   private static final Logger logger = LoggerFactory.getLogger(Application.class);

@@ -1,8 +1,6 @@
 package org.rest.service.swipe.common;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -19,11 +17,11 @@ public class ChannelWhitelist {
     return commandChannel;
   }
 
-  @Autowired
-  public ChannelWhitelist(
-      @Value("${discord.command.whitelist}") final List<String> whitelistChannels,
-      @Value("${discord.command.channel}") final String commandChannel) {
-    ChannelWhitelist.whitelistChannels = whitelistChannels;
-    ChannelWhitelist.commandChannel = commandChannel;
-  }
+  // @Autowired
+  // public ChannelWhitelist(
+  // @Value("${discord.command.whitelist}") final List<String> whitelistChannels,
+  // @Value("${discord.command.channel}") final String commandChannel) {
+  // ChannelWhitelist.whitelistChannels = whitelistChannels;
+  // ChannelWhitelist.commandChannel = commandChannel;
+  // }
 }

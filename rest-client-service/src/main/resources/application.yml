@@ -1,19 +1,20 @@
 spring:
   application:
     name: rest-service-client
-
 server:
-	servlet:
-		context-path: /api/swype
+   port: 8777
+   
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-    enabled: false
+    enabled: true
     healthcheck:
       enabled: true
     lease:
       duration: 5
+    register-with-eureka: true
+    fetch-registry: true
      
 feign:
    httpclient:
@@ -24,3 +25,7 @@ feign:
          default:
             connect-timeout: 60000
             read-timeout: 60000
+
+      
+http:
+   protocol: http
